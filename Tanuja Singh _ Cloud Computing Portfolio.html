@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tanuja Singh | Cloud Computing Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg1:#dff1ff;--bg2:#fff6ea;--ink:#12274a;--mute:#4d6285;--card:rgba(255,255,255,.72);--line:rgba(18,39,74,.14);--acc:#ff7a45;--acc2:#2f7cf6;--cloud:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0e1d3a;--bg2:#1b1840;--ink:#eaf1ff;--mute:#a4b5d6;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.16);--cloud:#2a3d6b;--acc:#ffa05c;--acc2:#6aa6ff}}
+:root[data-theme="dark"]{--bg1:#0e1d3a;--bg2:#1b1840;--ink:#eaf1ff;--mute:#a4b5d6;--card:rgba(255,255,255,.07);--line:rgba(255,255,255,.16);--cloud:#2a3d6b;--acc:#ffa05c;--acc2:#6aa6ff}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;font-family:Figtree,system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--bg1),var(--bg2));background-color:var(--bg1);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Bricolage Grotesque',Figtree,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;backdrop-filter:blur(10px);background:var(--card);border-bottom:1px solid var(--line)}
+nav b{font-family:'Bricolage Grotesque',sans-serif;font-size:1.2rem}
+nav div{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;color:var(--mute)}nav a:hover{color:var(--ink)}
+button.t{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:6px 12px;cursor:pointer;font:inherit}
+section{padding:80px 5vw;max-width:1100px;margin:auto}
+.hero{min-height:88vh;display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center;position:relative}
+.sky{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none}
+.cl{position:absolute;background:var(--cloud);border-radius:99px;opacity:.85;animation:drift linear infinite}
+.cl::before,.cl::after{content:"";position:absolute;background:inherit;border-radius:50%}
+.cl::before{width:50%;height:160%;left:15%;top:-70%}.cl::after{width:40%;height:130%;right:15%;top:-45%}
+@keyframes drift{from{transform:translateX(-30vw)}to{transform:translateX(120vw)}}
+.hi{color:var(--mute);font-weight:600;margin:0 0 8px}
+h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:800;letter-spacing:-.03em}
+h1 span{background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:1.25rem;margin:16px 0 8px;min-height:1.9em;font-weight:600}
+.role i{display:inline-block;width:3px;height:1.1em;background:var(--acc);vertical-align:-3px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{color:var(--mute);max-width:46ch}
+.btns{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid var(--line);transition:transform .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{background:var(--acc);color:#1b1206;border-color:transparent}
+.arch{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;backdrop-filter:blur(8px)}
+.arch svg{width:100%;height:auto;display:block}
+.arch text{font:600 13px Figtree,sans-serif;fill:var(--ink)}
+.arch .box{fill:var(--card);stroke:var(--acc2);stroke-width:2}
+.arch .path{stroke:var(--line);stroke-width:2;fill:none;stroke-dasharray:5 5}
+.pk{fill:var(--acc)}
+.cap{text-align:center;color:var(--mute);font-size:.85rem;margin:6px 0 0}
+h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.sub{color:var(--mute);max-width:60ch;margin:0 0 32px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+.fact b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:1.5rem}
+.fact span{color:var(--mute);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--acc)}
+.card .ic{font-size:2rem}
+.card h3{font-size:1.25rem;margin:10px 0 6px}
+.card p{margin:0;color:var(--mute);font-size:.95rem}
+.bars{display:grid;gap:14px;max-width:640px}
+.bar div:first-child{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+.track{height:10px;border-radius:9px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--acc2),var(--acc));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chips span{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:.9rem}
+.contact{text-align:center}
+.contact .grid{max-width:700px;margin:24px auto 0}
+footer{text-align:center;color:var(--mute);padding:30px 5vw 40px;font-size:.9rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rv.on{opacity:1;transform:none}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}.hero{min-height:auto;padding-top:50px}nav div a:not(.keep){display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><b>Tanuja Singh</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact" class="keep">Contact</a><button class="t" id="th" aria-label="Switch light or dark theme">Theme</button></div></nav>
+
+<section class="hero" id="top">
+<div class="sky" aria-hidden="true">
+<div class="cl" style="width:160px;height:44px;top:12%;animation-duration:70s"></div>
+<div class="cl" style="width:110px;height:32px;top:46%;animation-duration:55s;animation-delay:-25s"></div>
+<div class="cl" style="width:200px;height:52px;top:76%;animation-duration:90s;animation-delay:-50s"></div>
+</div>
+<div>
+<p class="hi">Hello, I’m</p>
+<h1>Tanuja <span>Singh</span></h1>
+<div class="role"><span id="type"></span><i></i></div>
+<p class="lead">B.Tech CSE student in my 3rd semester, building and running real things on the cloud: servers, storage and databases.</p>
+<div class="btns"><a class="btn p" href="#projects">See my work</a><a class="btn" href="#contact">Contact me</a></div>
+</div>
+<div class="arch">
+<svg viewBox="0 0 420 330" role="img" aria-label="Animated diagram: a user request flows through EC2 to RDS and S3">
+<path id="p1" class="path" d="M60 60 L210 60"/>
+<path id="p2" class="path" d="M210 90 L210 160 L90 230"/>
+<path id="p3" class="path" d="M210 90 L210 160 L330 230"/>
+<g><rect class="box" x="10" y="35" width="100" height="50" rx="12"/><text x="60" y="65" text-anchor="middle">User</text></g>
+<g><rect class="box" x="160" y="35" width="100" height="50" rx="12" style="stroke:var(--acc)"/><text x="210" y="65" text-anchor="middle">EC2 server</text></g>
+<g><rect class="box" x="40" y="230" width="100" height="50" rx="12"/><text x="90" y="260" text-anchor="middle">RDS database</text></g>
+<g><rect class="box" x="280" y="230" width="100" height="50" rx="12"/><text x="330" y="260" text-anchor="middle">S3 bucket</text></g>
+<circle class="pk" r="6"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+<circle class="pk" r="6"><animateMotion dur="3s" begin=".8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle>
+<circle class="pk" r="6"><animateMotion dur="3s" begin="1.6s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+</svg>
+<p class="cap">A request travelling through a simple AWS setup</p>
+</div>
+</section>
+
+<section id="about" class="rv">
+<div class="about">
+<div><h2>About me</h2>
+<p class="sub">I’m Tanuja, a B.Tech Computer Science student who loves cloud computing. I learn by launching things myself: I create servers, store files in buckets, set up databases, and see how each piece connects to the others.</p>
+<p class="sub">My goal is to become a cloud engineer who designs fast, secure and low-cost systems.</p></div>
+<div class="facts">
+<div class="fact"><b>3rd</b><span>Semester, B.Tech CSE</span></div>
+<div class="fact"><b>Cloud</b><span>My chosen domain</span></div>
+<div class="fact"><b>AWS</b><span>EC2, S3, RDS and more</span></div>
+<div class="fact"><b>VPS</b><span>Hands-on server setup</span></div>
+</div></div>
+</section>
+
+<section id="skills" class="rv">
+<h2>What I work with</h2>
+<p class="sub">Services I have used myself, not just read about.</p>
+<div class="grid">
+<div class="card"><div class="ic">🖥️</div><h3>Amazon EC2</h3><p>Launch and connect to virtual servers, choose instance types and manage security groups.</p></div>
+<div class="card"><div class="ic">🪣</div><h3>Amazon S3</h3><p>Create buckets, upload files and set access permissions, including static website hosting.</p></div>
+<div class="card"><div class="ic">🗄️</div><h3>Amazon RDS</h3><p>Set up managed databases and connect them to applications.</p></div>
+<div class="card"><div class="ic">🌐</div><h3>VPS hosting</h3><p>Configure and run a virtual private server from scratch.</p></div>
+</div>
+<div class="bars" style="margin-top:44px">
+<div class="bar"><div><span>EC2 and servers</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+<div class="bar"><div><span>S3 storage</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+<div class="bar"><div><span>RDS databases</span><span>70%</span></div><div class="track"><div class="fill" data-w="70"></div></div></div>
+<div class="bar"><div><span>VPS and Linux basics</span><span>75%</span></div><div class="track"><div class="fill" data-w="75"></div></div></div>
+</div>
+<div class="chips"><span>IAM</span><span>VPC</span><span>Security groups</span><span>Linux</span><span>SSH</span><span>Networking</span></div>
+</section>
+
+<section id="projects" class="rv">
+<h2>Projects</h2>
+<p class="sub">Things I have built while learning the cloud.</p>
+<div class="grid">
+<div class="card"><div class="ic">🚀</div><h3>Web server on EC2</h3><p>Launched an EC2 instance, connected over SSH and served a website to the internet.</p></div>
+<div class="card"><div class="ic">📦</div><h3>Static site on S3</h3><p>Hosted a static website from an S3 bucket with public read access.</p></div>
+<div class="card"><div class="ic">🔗</div><h3>App with RDS</h3><p>Connected an application to a managed RDS database for storing data.</p></div>
+<div class="card"><div class="ic">🛠️</div><h3>Own VPS setup</h3><p>Configured a VPS, installed software and secured it step by step.</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact rv">
+<h2>Let’s connect</h2>
+<p class="sub" style="margin-inline:auto">Looking for internships and cloud projects to learn from. Say hello!</p>
+<div class="grid">
+<a class="card" href="mailto:your-email@example.com" style="text-decoration:none"><div class="ic">✉️</div><h3>Email</h3><p>your-email@example.com</p></a>
+<a class="card" href="https://www.linkedin.com/" style="text-decoration:none"><div class="ic">💼</div><h3>LinkedIn</h3><p>Add your profile link</p></a>
+<a class="card" href="https://github.com/" style="text-decoration:none"><div class="ic">💻</div><h3>GitHub</h3><p>Add your profile link</p></a>
+</div>
+</section>
+<footer>© 2026 Tanuja Singh. Built with curiosity and a lot of clouds.</footer>
+
+<script>
+const words=["Cloud Computing Enthusiast","AWS Learner","EC2, S3 and RDS Explorer"];
+let w=0,c=0,del=false;const el=document.getElementById('type');
+function tick(){const s=words[w];el.textContent=s.slice(0,c);
+if(!del&&c<s.length){c++;setTimeout(tick,70)}
+else if(!del){del=true;setTimeout(tick,1400)}
+else if(c>0){c--;setTimeout(tick,35)}
+else{del=false;w=(w+1)%words.length;setTimeout(tick,300)}}
+tick();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');
+e.target.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(n=>io.observe(n));
+document.getElementById('th').onclick=()=>{const r=document.documentElement;
+const dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+r.dataset.theme=dark?'light':'dark'};
+</script>
+</body>
+</html>
